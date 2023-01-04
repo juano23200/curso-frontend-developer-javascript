@@ -18,7 +18,7 @@ const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 //Permite seleccionar el elemento el cual contiene la clase product-detail para poderla
 //utilizar dentro de la funcion toggleDesktopMenu() la cual permite mostrar y 
 //ocultar el contenido del carrito de compras.
-const aside = document.querySelector('.product-detail');//.product-detail permite indicar que
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');//.product-detail permite indicar que
                                                             //podemos elegir cualquier clase
                                                             //que se encuentre dentro de este elemento
 
@@ -62,10 +62,10 @@ menuCarritoIcon.addEventListener('click', toggleCarritoAside);
 //clase inactive
 function toggleDesktopMenu() {
   //console.log('Click');
-  const isAsideClosed = aside.classList.contains('inactive');
+  const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
 
   if (!isAsideClosed) {
-    aside.classList.add('inactive');
+    shoppingCartContainer.classList.add('inactive');
   }
   
   desktopMenu.classList.toggle('inactive');
@@ -74,10 +74,10 @@ function toggleDesktopMenu() {
 
 /*-----------FUNCION PARA MOSTRAR O OCULTAR EL MENU HAMBURGUESA----------------------- */
 function toggleMobileMenu() {
-    const isAsideClosed = aside.classList.contains('inactive');
+    const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
 
     if (!isAsideClosed) {
-      aside.classList.add('inactive'); 
+      shoppingCartContainer.classList.add('inactive'); 
     }
     
     mobileMenu.classList.toggle('inactive');
@@ -92,7 +92,7 @@ function toggleMobileMenu() {
       mobileMenu.classList.add('inactive'); 
     }
     
-    aside.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
   }
 
 
